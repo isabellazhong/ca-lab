@@ -17,8 +17,7 @@ public class LogoutController {
     /**
      * Executes the Logout Use Case.
      */
-    public void execute(String username) {
-        final LogoutOutputData logoutOutputData = new LogoutOutputData(username);
-        logoutUseCaseInteractor.execute(logoutOutputData);
+    public void execute() {
+        logoutUseCaseInteractor.execute();
     }
 }

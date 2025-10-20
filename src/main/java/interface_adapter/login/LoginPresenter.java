@@ -16,8 +16,8 @@ public class LoginPresenter implements LoginOutputBoundary {
     private final ViewManagerModel viewManagerModel;
 
     public LoginPresenter(ViewManagerModel viewManagerModel,
-                          LoggedInViewModel loggedInViewModel,
-                          LoginViewModel loginViewModel) {
+            LoggedInViewModel loggedInViewModel,
+            LoginViewModel loginViewModel) {
         this.viewManagerModel = viewManagerModel;
         this.loggedInViewModel = loggedInViewModel;
         this.loginViewModel = loginViewModel;
@@ -32,6 +32,7 @@ public class LoginPresenter implements LoginOutputBoundary {
 
         // and clear everything from the LoginViewModel's state
         loginViewModel.setState(new LoginState());
+        loginViewModel.firePropertyChange();
 
         // switch to the logged in view
         this.viewManagerModel.setState(loggedInViewModel.getViewName());

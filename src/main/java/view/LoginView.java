@@ -58,12 +58,10 @@ public class LoginView extends JPanel implements ActionListener, PropertyChangeL
 
                             loginController.execute(
                                     currentState.getUsername(),
-                                    currentState.getPassword()
-                            );
+                                    currentState.getPassword());
                         }
                     }
-                }
-        );
+                });
 
         cancel.addActionListener(this);
 
@@ -126,6 +124,7 @@ public class LoginView extends JPanel implements ActionListener, PropertyChangeL
 
     /**
      * React to a button click that results in evt.
+     * 
      * @param evt the ActionEvent to react to
      */
     public void actionPerformed(ActionEvent evt) {
@@ -141,6 +140,7 @@ public class LoginView extends JPanel implements ActionListener, PropertyChangeL
 
     private void setFields(LoginState state) {
         usernameInputField.setText(state.getUsername());
+        passwordInputField.setText(state.getPassword());
     }
 
     public String getViewName() {
