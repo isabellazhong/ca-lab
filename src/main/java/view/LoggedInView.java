@@ -84,11 +84,8 @@ public class LoggedInView extends JPanel implements ActionListener, PropertyChan
         logOut.addActionListener(
                 evt -> {
                     if (evt.getSource().equals(logOut)) {
-                        final LoggedInState currentState = loggedInViewModel.getState();
 
-                        this.logoutController.execute(
-                            currentState.getUsername()
-                        );
+                        this.logoutController.execute();
                     }
                 }
         );
