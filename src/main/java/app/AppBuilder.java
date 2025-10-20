@@ -40,7 +40,6 @@ public class AppBuilder {
     final UserFactory userFactory = new UserFactory();
     final ViewManagerModel viewManagerModel = new ViewManagerModel();
     ViewManager viewManager = new ViewManager(cardPanel, cardLayout, viewManagerModel);
-
     // set which data access implementation to use, can be any
     // of the classes from the data_access package
 
